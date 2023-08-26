@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-search" width="250px" height="250px" viewBox="0 0 24 24" stroke-width="1.00" stroke="rgba(1, 1, 1, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="50%" cy="50%" r="50%" stroke="none" stroke-width="0" fill="rgba(255, 255, 255, 1)"/><g transform="translate(2.40, 2.40) scale(0.8)"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4 -4h1"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M18.5 19.5l2.5 2.5"/></g>
-  
-  
-  
-  
-  
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-question" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
+  <path d="M19 22v.01" />
+  <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
 </svg>
+
+
