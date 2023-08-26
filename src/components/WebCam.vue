@@ -36,18 +36,18 @@ onMounted(async () => {
 	height: auto;
 	display: flex;
 	justify-content: center;
-}
 
-.webcam video {
-	width: 100%;
-	height: auto;
+	:is(video) {
+		width: 100%;
+		height: auto;
 
-	/* mirror webcam video to look more natural */
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-	filter: FlipH;
-	-ms-filter: 'FlipH';
+		/* mirror webcam video to look more natural */
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		filter: FlipH;
+		-ms-filter: 'FlipH';
+	}
 }
 </style>
