@@ -1,26 +1,30 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import PageTitle from './PageTitle.vue'
 
 const player = ref<HTMLVideoElement | null>(null)
+const playerShown = ref(false)
 
 // when the component is mounted, start the webcam
-onMounted(() => {
-	if (navigator.mediaDevices.getUserMedia) {
-		navigator.mediaDevices
-			.getUserMedia({ video: true })
-			.then(function (stream) {
-				// video.srcObject = stream;
-				if (player.value) player.value.srcObject = stream
+onMounted(async () => {
+	try {
+		if (navigator.mediaDevices.getUserMedia) {
+			const stream = await navigator.mediaDevices.getUserMedia({
+				video: { facingMode: 'user' },
 			})
-			.catch(function (err0r) {
-				console.log('Something went wrong!')
-				console.error(err0r)
-			})
+
+			if (player.value) player.value.srcObject = stream
+			playerShown.value = true
+			console.log("foo'd")
+		}
+	} catch (err) {
+		console.error('Something went wrong:', err)
 	}
 })
 </script>
 
 <template>
+	<PageTitle v-if="playerShown" />
 	<div class="webcam">
 		<video id="player" ref="player" autoplay></video>
 	</div>
