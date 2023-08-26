@@ -2,8 +2,8 @@
 import { ref, onMounted } from 'vue'
 import PageTitle from './PageTitle.vue'
 
-const player = ref<HTMLVideoElement | null>(null)
-const playerShown = ref(false)
+const webcam = ref<HTMLVideoElement | null>(null)
+const isWebcamShowing = ref(false)
 
 // when the component is mounted, start the webcam
 onMounted(async () => {
@@ -13,8 +13,8 @@ onMounted(async () => {
 				video: { facingMode: 'user' },
 			})
 
-			if (player.value) player.value.srcObject = stream
-			playerShown.value = true
+			if (webcam.value) webcam.value.srcObject = stream
+			isWebcamShowing.value = true
 			console.log("foo'd")
 		}
 	} catch (err) {
@@ -24,9 +24,9 @@ onMounted(async () => {
 </script>
 
 <template>
-	<PageTitle v-if="playerShown" />
+	<PageTitle v-if="isWebcamShowing" />
 	<div class="webcam">
-		<video id="player" ref="player" autoplay></video>
+		<video id="player" ref="webcam" autoplay></video>
 	</div>
 </template>
 
