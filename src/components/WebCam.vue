@@ -15,10 +15,10 @@ onMounted(async () => {
 
 			if (webcam.value) webcam.value.srcObject = stream
 			isWebcamShowing.value = true
-			console.log("foo'd")
+			console.log("you've been foo'd !")
 		}
 	} catch (err) {
-		console.error('Something went wrong:', err)
+		console.error('something went wrong:', err)
 	}
 })
 </script>
@@ -26,7 +26,7 @@ onMounted(async () => {
 <template>
 	<PageTitle v-if="isWebcamShowing" />
 	<div class="webcam">
-		<video id="player" ref="webcam" autoplay></video>
+		<video ref="webcam" autoplay></video>
 	</div>
 </template>
 
@@ -36,18 +36,18 @@ onMounted(async () => {
 	height: auto;
 	display: flex;
 	justify-content: center;
-}
 
-#player {
-	width: 100%;
-	height: auto;
+	video {
+		width: 100%;
+		height: auto;
 
-	/* mirror webcam video to look more natural */
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-	filter: FlipH;
-	-ms-filter: 'FlipH';
+		/* mirror webcam video to look more natural */
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		filter: FlipH;
+		-ms-filter: 'FlipH';
+	}
 }
 </style>
