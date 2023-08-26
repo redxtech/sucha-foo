@@ -41,6 +41,9 @@ onMounted(async () => {
 		width: 100%;
 		height: auto;
 
+		border-radius: 10px;
+		border: 4px solid darkslategray;
+
 		/* mirror webcam video to look more natural */
 		-moz-transform: scale(-1, 1);
 		-webkit-transform: scale(-1, 1);
