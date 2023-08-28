@@ -27,7 +27,7 @@ onMounted(async () => {
 	<PageTitle :isWebcamShowing="isWebcamShowing" />
 
 	<div class="webcam">
-		<video ref="webcam" v-show="isWebcamShowing" autoplay></video>
+		<video ref="webcam" v-show="isWebcamShowing" autoplay muted></video>
 	</div>
 </template>
 
